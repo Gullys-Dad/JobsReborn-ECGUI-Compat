@@ -1,0 +1,19 @@
+# Jobs Points Addon Configuration
+# This plugin bridges Jobs Reborn job points with EconomyShopGUI
+
+# Color/formatting prefix placed BEFORE the price number in shop lore.
+# Use "&" color codes (e.g. "&6" = gold, "&e" = yellow, "&f" = white).
+# This overrides EconomyShopGUI's default lang color for the price.
+price-prefix: "&6"
+
+# The display name for the currency shown AFTER the price number.
+# Supports color codes (e.g. "&eJob Points").
+# Used in price formatting (e.g. "10 Job Points") and
+# in messages like "You don't have enough Job Points".
+currency-name: "Job Points"
+
+# Singular form of the currency name (used for amounts of exactly 1).
+currency-name-singular: "Job Point"
+
+# Enable debug logging to console
+debug-mode: false

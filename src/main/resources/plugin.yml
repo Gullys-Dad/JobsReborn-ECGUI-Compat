@@ -1,0 +1,26 @@
+# Bukkit/Legacy fallback descriptor.
+# Paper will prefer paper-plugin.yml when using the modern loader,
+# but this file ensures the plugin still loads under the legacy strategy
+# (e.g. cached .paper-remapped JARs or non-Paper forks).
+
+name: JobsPointsAddon
+version: '${project.version}'
+main: com.jobspointsaddon.JobsPointsAddon
+api-version: '1.20'
+authors:
+  - Gullys_Dad
+description: Bridge between Jobs Reborn points and EconomyShopGUI
+
+depend:
+  - Jobs
+  - EconomyShopGUI-Premium
+
+commands:
+  jobspoints:
+    description: Reload the JobsPointsAddon config
+    usage: /jobspoints reload
+
+permissions:
+  jobspoints.admin:
+    description: Reload the JobsPointsAddon config
+    default: op

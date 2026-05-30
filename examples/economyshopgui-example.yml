@@ -1,0 +1,41 @@
+# EconomyShopGUI Shop Configuration Example
+# Shows how to use Jobs Points as currency in your shops.
+#
+# In your shop .yml files, set:
+#   economy: EXTERNAL:JobsPointsAddon
+# on the section level or per-item.
+
+# --- Section-level example (all items in this section use Job Points) ---
+jobs_shop:
+  economy: EXTERNAL:JobsPointsAddon
+  page1:
+    items:
+      GOLDEN_CARROT_1_2:
+        material: GOLDEN_CARROT
+        buy: 10
+
+      DIAMOND_1_3:
+        material: DIAMOND
+        buy: 100
+        sell: 50
+
+# --- Per-item example (override a single item's economy) ---
+mixed_shop:
+  page1:
+    items:
+      # This item uses Vault (server default)
+      EMERALD_1_1:
+        material: EMERALD
+        buy: 500
+
+      # This item uses Job Points
+      GOLDEN_APPLE_1_2:
+        material: GOLDEN_APPLE
+        buy: 200
+        economy: EXTERNAL:JobsPointsAddon
+
+# Price suggestions based on typical Jobs point earnings:
+#   Common items    :   10 –  50 points
+#   Medium items    :  100 – 500 points
+#   Rare items      :  500 – 2000 points
+#   Special items   : 2000+ points
